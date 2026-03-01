@@ -92,11 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== ACTIVE NAV LINK =====
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('text-cyan-400');
+    const linkPath = href.replace(/\/$/, '') || '/';
+    if (linkPath === path || (path === '' && linkPath === '/')) {
+      link.classList.add('text-[#00C6E0]');
     }
   });
 
