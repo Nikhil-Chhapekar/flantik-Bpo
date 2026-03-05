@@ -24,16 +24,27 @@ function renderNavbar() {
         <div class="hidden md:flex items-center gap-8">
           <a href="/" class="nav-link text-slate-300 hover:text-[#00C6E0] transition-colors duration-300 text-sm font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#00C6E0] after:transition-all hover:after:w-full">Home</a>
           <a href="/about" class="nav-link text-slate-300 hover:text-[#00C6E0] transition-colors duration-300 text-sm font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#00C6E0] after:transition-all hover:after:w-full">About</a>
-          <a href="/services" class="nav-link text-slate-300 hover:text-[#00C6E0] transition-colors duration-300 text-sm font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#00C6E0] after:transition-all hover:after:w-full">Services</a>
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button class="nav-link flex items-center gap-1 text-slate-300 hover:text-[#00C6E0] transition-colors duration-300 text-sm font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#00C6E0] after:transition-all group-hover:after:w-full">
+              Services <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-6 w-64 bg-slate-900 border border-slate-800 rounded-xl shadow-xl shadow-black/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden z-50">
+              <a href="/services" class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-colors border-b border-slate-800">All Services</a>
+              <a href="/services/customer-support" class="block px-4 py-3 text-sm text-slate-300 hover:text-[#00C6E0] hover:bg-slate-800/50 transition-colors">Customer Support</a>
+              <a href="/services/technical-support" class="block px-4 py-3 text-sm text-slate-300 hover:text-[#00C6E0] hover:bg-slate-800/50 transition-colors">Technical Support</a>
+              <a href="/services/digital-marketing" class="block px-4 py-3 text-sm text-slate-300 hover:text-[#00C6E0] hover:bg-slate-800/50 transition-colors">Digital Marketing</a>
+              <a href="/services/telemarketing" class="block px-4 py-3 text-sm text-slate-300 hover:text-[#00C6E0] hover:bg-slate-800/50 transition-colors">Telemarketing</a>
+              <a href="/services/email-chat-support" class="block px-4 py-3 text-sm text-slate-300 hover:text-[#00C6E0] hover:bg-slate-800/50 transition-colors">Email & Chat Support</a>
+              <a href="/services/hiring-support" class="block px-4 py-3 text-sm text-slate-300 hover:text-[#00C6E0] hover:bg-slate-800/50 transition-colors">Hiring Support</a>
+            </div>
+          </div>
           <a href="/careers" class="nav-link text-slate-300 hover:text-[#00C6E0] transition-colors duration-300 text-sm font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#00C6E0] after:transition-all hover:after:w-full">Careers</a>
           <a href="/contact" class="nav-link text-slate-300 hover:text-[#00C6E0] transition-colors duration-300 text-sm font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-[#00C6E0] after:transition-all hover:after:w-full">Contact</a>
         </div>
 
         <!-- Right side -->
         <div class="flex items-center gap-4">
-          <button id="dark-toggle" class="text-slate-300 hover:text-[#00C6E0] transition-colors p-2 rounded-lg hover:bg-slate-800" aria-label="Toggle dark mode">
-            <i data-lucide="moon" class="w-5 h-5"></i>
-          </button>
           <a href="/contact" class="hidden md:inline-flex btn-primary text-white px-5 py-2.5 rounded-lg text-sm font-semibold">
             Get Started
           </a>
@@ -53,7 +64,15 @@ function renderNavbar() {
       <div class="px-4 py-4 space-y-3">
         <a href="/" class="nav-link block text-slate-300 hover:text-[#00C6E0] py-2 px-4 rounded-lg hover:bg-slate-800 transition-all">Home</a>
         <a href="/about" class="nav-link block text-slate-300 hover:text-[#00C6E0] py-2 px-4 rounded-lg hover:bg-slate-800 transition-all">About</a>
-        <a href="/services" class="nav-link block text-slate-300 hover:text-[#00C6E0] py-2 px-4 rounded-lg hover:bg-slate-800 transition-all">Services</a>
+        <a href="/services" class="nav-link block text-slate-300 hover:text-[#00C6E0] py-2 px-4 rounded-lg hover:bg-slate-800 transition-all font-semibold">Services</a>
+        <div class="pl-6 space-y-1">
+          <a href="/services/customer-support" class="nav-link block text-slate-400 hover:text-[#00C6E0] py-1.5 px-4 rounded-lg hover:bg-slate-800 transition-all text-sm">Customer Support</a>
+          <a href="/services/technical-support" class="nav-link block text-slate-400 hover:text-[#00C6E0] py-1.5 px-4 rounded-lg hover:bg-slate-800 transition-all text-sm">Technical Support</a>
+          <a href="/services/digital-marketing" class="nav-link block text-slate-400 hover:text-[#00C6E0] py-1.5 px-4 rounded-lg hover:bg-slate-800 transition-all text-sm">Digital Marketing</a>
+          <a href="/services/telemarketing" class="nav-link block text-slate-400 hover:text-[#00C6E0] py-1.5 px-4 rounded-lg hover:bg-slate-800 transition-all text-sm">Telemarketing</a>
+          <a href="/services/email-chat-support" class="nav-link block text-slate-400 hover:text-[#00C6E0] py-1.5 px-4 rounded-lg hover:bg-slate-800 transition-all text-sm">Email & Chat Support</a>
+          <a href="/services/hiring-support" class="nav-link block text-slate-400 hover:text-[#00C6E0] py-1.5 px-4 rounded-lg hover:bg-slate-800 transition-all text-sm">Hiring Support</a>
+        </div>
         <a href="/careers" class="nav-link block text-slate-300 hover:text-[#00C6E0] py-2 px-4 rounded-lg hover:bg-slate-800 transition-all">Careers</a>
         <a href="/contact" class="nav-link block text-slate-300 hover:text-[#00C6E0] py-2 px-4 rounded-lg hover:bg-slate-800 transition-all">Contact</a>
         <a href="/contact" class="block btn-primary text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold mt-2">Get Started</a>

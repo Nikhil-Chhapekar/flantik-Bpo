@@ -9,7 +9,7 @@ function renderFooter() {
   container.innerHTML = `
   <footer class="bg-slate-900 dark:bg-slate-950 border-t border-slate-800">
     <!-- Newsletter Section -->
-    <div class="bg-gradient-to-r from-[#0077B6] via-[#00C6E0] to-[#7C3AED]">
+    <div class="bg-gradient-to-r from-[#7C3AED] via-purple-600 to-purple-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
@@ -116,6 +116,23 @@ function renderFooter() {
       </div>
     </div>
   </footer>
+
+  <!-- Sticky Action Buttons -->
+  <div class="fixed bottom-[90px] right-[30px] flex flex-col gap-4 z-[999]">
+    <!-- AI Chatbot Button -->
+    <button aria-label="AI Chatbot" class="w-12 h-12 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#00C6E0] text-white flex items-center justify-center shadow-lg shadow-[#7C3AED]/40 hover:scale-110 transition-transform duration-300 group relative">
+      <i data-lucide="bot" class="w-6 h-6"></i>
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-4 bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">Chat with AI</span>
+    </button>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918600390716" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg shadow-[#25D366]/40 hover:scale-110 transition-transform duration-300 group relative">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-4 bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">WhatsApp Us</span>
+    </a>
+  </div>
 
   <!-- Back to Top -->
   <button id="back-to-top" aria-label="Back to top">
